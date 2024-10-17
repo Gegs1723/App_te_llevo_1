@@ -1,0 +1,51 @@
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom,#FFFFFF, #F1B634); /* Degradado de azul a blanco */
+    padding: 20px; /* Añadir un poco de espacio alrededor */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+    color: #F1B634; /* Títulos en amarillo corporativo */
+    text-transform: uppercase; /* Títulos en mayúsculas */
+    font-family: 'Myriad Pro', sans-serif; /* Tipografía principal */
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #132CAA; /* Letras en color corporativo azul */
+    margin: 10px 0; /* Añadir margen vertical entre párrafos */
+    font-family: 'Myriad Pro', sans-serif; /* Tipografía principal */
+}
+
+#container a {
+    text-decoration: none;
+    color: #37A7C6; /* Enlaces en azul corporativo */
+    font-family: 'Myriad Pro', sans-serif; /* Tipografía principal */
+}
+
+ion-button {
+    background-color: #2B9141; /* Botón verde */
+    color: #FFFFFF; /* Texto blanco */
+    margin-top: 10px; /* Espaciado superior */
+    font-family: 'Myriad Pro', sans-serif; /* Tipografía principal */
+}
+
+ion-button:hover {
+    background-color: #132CAA; /* Color de botón al pasar el ratón */
+}
+
+.container-image {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Espaciado inferior entre la imagen y el texto */
+}

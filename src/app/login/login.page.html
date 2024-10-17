@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div id="container">
+    <strong>Bienvenidos a TeLlevoApp</strong><br>
+    <img src="assets/images/logoduoc.png" alt="Descripción de la imagen" class="container-image"><br>
+    <form (ngSubmit)="onLogin()">
+      <ion-item>
+        <ion-label position="floating">Nombre de usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="!username || !password">Iniciar Sesión</ion-button>
+    </form>
+
+    <p>¿Olvidaste tu contraseña? <a routerLink="/recover-password">Recuperar aquí</a></p>
+    <p>¿No tienes cuenta? <a [routerLink]="['/register']">Regístrate aquí</a></p>
+    
+    <h3>Condiciones de la Contraseña:</h3>
+    <ul>
+      <li>Mínimo 8 caracteres</li>
+      <li>Incluir al menos un número</li>
+      <li>Incluir al menos una letra mayúscula</li>
+      <li>Incluir al menos un carácter especial</li>
+    </ul>
+  </div>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div id="container">
+    <strong>Regístrate en TeLlevoApp</strong><br>
+    <form (ngSubmit)="onRegister()">
+      <ion-item>
+        <ion-label position="floating">Nombre completo</ion-label>
+        <ion-input type="text" [(ngModel)]="fullName" name="fullName" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Número de teléfono</ion-label>
+        <ion-input type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirma Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Ubicación</ion-label>
+        <ion-input type="text" [(ngModel)]="location" name="location"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Método de pago</ion-label>
+        <ion-select [(ngModel)]="paymentMethod" name="paymentMethod" required>
+          <ion-select-option value="creditCard">Tarjeta de Crédito/Débito</ion-select-option>
+          <ion-select-option value="paypal">Efectivo</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <p>La contraseña debe tener al menos 8 caracteres, una letra mayúscula y un número.</p>
+
+      <ion-button expand="full" type="submit">Registrarse</ion-button>
+    </form>
+  </div>
+</ion-content>
